@@ -1,6 +1,6 @@
 import rclpy
-from rcply.node import Node
-from std_msgs.msg import Int16
+from rclpy.node import Node
+from person_msgs.msg import Person
 
 
 rclpy.init()
