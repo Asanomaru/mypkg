@@ -1,1 +1,1 @@
-# mypkg
+# mypackage
