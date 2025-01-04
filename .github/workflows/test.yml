@@ -6,14 +6,25 @@ jobs:
     container: ryuichiueda/ubuntu22.04-ros2:latest
     steps:
       - uses: actions/checkout@v2
-      - name: build and test
+      - name: debug workspace setup
         run: |
+          echo "Starting Workspace Setup"
+          mkdir -p /root/ros2_ws/src
           rsync -av ./ /root/ros2_ws/src/mypkg/
-          cd /root/ros2_ws
+          ls -la /root/ros2_ws/src/mypkg
+      - name: setup ros 2 environment
+        run: |
+          echo "Sourcing ROS 2 Envitonment"
           source /opt/ros/humble/setup.bash
-      - name: build and test
+          colcon --version
+      - name: build package
         run: |
           cd /root/ros2_ws
+          source /opt/humble/setup.bash
           colcon build --packages-select mypkg
-          source install/setup.bash
+          ls -la install
+      - name: run test script
+        run: |
+          cd /root/ros2_ws
+          source /opt/humble/setup.bash
           bash -xv ./src/mypkg/test/test.bash /root
