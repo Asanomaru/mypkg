@@ -18,7 +18,7 @@ jobs:
         shell: bash
         run: |
           echo "Sourcing ROS 2 Environment"
-          export ROS_DISTRO=foxy
+          export ROS_DISTRO=humble
           source /opt/ros/$ROS_DISTRO/setup.bash
           colcon list
 
@@ -36,12 +36,3 @@ jobs:
           cd /root/ros2_ws
           source /opt/ros/$ROS_DISTRO/setup.bash
           bash -xv ./src/mypkg/test/test.bash /root
-
-      - name: Debug Logs (if test fails)
-        if: failure()
-        shell: bash
-        run: |
-          echo "Test failed. Debugging logs..."
-          cat /tmp/mypkg.log || echo "No logs found."
-          ls -la /tmp
-
