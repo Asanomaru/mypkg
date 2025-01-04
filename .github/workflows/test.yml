@@ -13,17 +13,20 @@ jobs:
           rsync -av ./ /root/ros2_ws/src/mypkg/
           ls -la /root/ros2_ws/src/mypkg
       - name: setup ros 2 environment
+        shell: bash
         run: |
           echo "Sourcing ROS 2 Envitonment"
           source /opt/ros/humble/setup.bash
           colcon --version
       - name: build package
+        shell: bash
         run: |
           cd /root/ros2_ws
           source /opt/humble/setup.bash
           colcon build --packages-select mypkg
           ls -la install
       - name: run test script
+        shell: bash
         run: |
           cd /root/ros2_ws
           source /opt/humble/setup.bash
