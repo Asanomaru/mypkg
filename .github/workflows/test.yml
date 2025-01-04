@@ -18,7 +18,7 @@ jobs:
         shell: bash
         run: |
           echo "Sourcing ROS 2 Environment"
-          export ROS_DISTRO=humble
+          export ROS_DISTRO=humble 
           source /opt/ros/$ROS_DISTRO/setup.bash
           colcon list
 
