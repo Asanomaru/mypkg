@@ -17,7 +17,7 @@ jobs:
         run: |
           echo "Sourcing ROS 2 Envitonment"
           source /opt/ros/humble/setup.bash
-          colcon --version
+          colcon list
       - name: build package
         shell: bash
         run: |
