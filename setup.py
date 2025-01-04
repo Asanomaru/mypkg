@@ -25,6 +25,7 @@ setup(
         'console_scripts': [
             'talker = mypkg.talker:main',
             'listener = mypkg.listener:main',
+            'calendar_notifier = mypkg.calendar_notifier:main',
         ],
     },
 )

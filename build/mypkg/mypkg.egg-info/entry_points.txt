@@ -1,0 +1,5 @@
+[console_scripts]
+calendar_notifier = mypkg.calendar_notifier:main
+listener = mypkg.listener:main
+talker = mypkg.talker:main
+

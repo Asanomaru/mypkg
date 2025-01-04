@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: 2025 Yuuki Udagawa
+# SPDX-License-Identifier: BSD-3-Clause
+
+EVENTS = {
+    "2025-01-01": "New Year",
+    "2025-01-05": "Assignment Deadline",
+    "2025-01-13": "Coming of Age Day",
+    "2025-02-03": "Setsubun",
+    "2025-02-11": "National Foundation Day",
+    "2025-02-14": "Valentine's Day",
+    "2025-03-03": "Hinamatsuri",
+    "2025-03-20": "Spring Equinox Day",
+    "2025-04-01": "April Fool's Day",
+    "2025-04-08": "Flower Festival",
+    "2025-04-29": "Showa Day",
+    "2025-05-03": "Constitution Memorial Day",
+    "2025-05-04": "Greenery Day",
+    "2025-05-05": "Children's Day",
+    "2025-06-01": "Koromogae",
+    "2025-06-15": "Father's Day",
+    "2025-07-07": "Tanabata",
+    "2025-07-21": "Marine Day",
+    "2025-08-11": "Mountain Day",
+    "2025-08-13": "Obon",
+    "2025-09-15": "Respect for the Aged Day",
+    "2025-09-23": "Autumn Equinox Day",
+    "2025-10-10": "Happy Birthday",
+    "2025-10-13": "Sports Day",
+    "2025-10-31": "Halloween",
+    "2025-11-03": "Culture Day",
+    "2025-11-15": "Shichi-Go-San",
+    "2025-11-23": "Labor Thanksgiving Day",
+    "2025-12-25": "Christmas",
+    "2025-12-31": "New Year's Eve"
+}
