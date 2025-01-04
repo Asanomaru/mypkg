@@ -1,46 +1,12 @@
 name: test
 on: push
-
 jobs:
   test:
     runs-on: ubuntu-22.04
     container: ryuichiueda/ubuntu22.04-ros2:latest
     steps:
       - uses: actions/checkout@v2
-      - name: Debug Available ROS Distributions
-        shell: bash
+      - name: build and test
         run: |
-          echo "Checking available ROS distributions"
-          ls /opt/ros || echo "/opt/ros directory does not exist."
-
-      - name: Setup ROS 2 Environment
-        shell: bash
-        run: |
-          echo "Setting up ROS 2 Environment"
-          export ROS_DISTRO=humble
-          if [ -z "$ROS_DISTRO" ]; then
-            echo "Error: ROS_DISTRO is not set."
-            exit 1
-          fi
-          if [ ! -d "/opt/ros/$ROS_DISTRO" ]; then
-            echo "Error: The specified ROS_DISTRO ($ROS_DISTRO) is not available."
-            exit 1
-          fi
-          echo "ROS_DISTRO is set to: $ROS_DISTRO"
-          source /opt/ros/$ROS_DISTRO/setup.bash
-          colcon list || echo "colcon list failed"
-
-      - name: Build Package
-        shell: bash
-        run: |
+          rsync -av ./ /root/ros2_ws/src/mypkg/
           cd /root/ros2_ws
-          source /opt/ros/$ROS_DISTRO/setup.bash
-          colcon build --packages-select mypkg
-          ls -la install
-
-      - name: Run Test Script
-        shell: bash
-        run: |
-          cd /root/ros2_ws
-          source /opt/ros/$ROS_DISTRO/setup.bash
-          bash -xv ./src/mypkg/test/test.bash /root
