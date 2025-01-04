@@ -12,13 +12,13 @@ jobs:
           mkdir -p /root/ros2_ws/src
           rsync -av ./ /root/ros2_ws/src/mypkg/
           ls -la /root/ros2_ws/src/mypkg
-      - name: setup ros 2 environment
-        shell: bash
-        run: |
-          echo "Sourcing ROS 2 Envitonment"
-          export ROS_DISTRO=foxy
-          source /opt/ros/humble/setup.bash
-          colcon list
+      #- name: setup ros 2 environment
+      # shell: bash
+      # run: |
+      #   echo "Sourcing ROS 2 Envitonment"
+      #   export ROS_DISTRO=foxy
+      #   source /opt/ros/humble/setup.bash
+      #   colcon list
       - name: build package
         shell: bash
         run: |
