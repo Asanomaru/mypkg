@@ -13,12 +13,18 @@ jobs:
         run: |
           echo "Checking available ROS distributions"
           ls /opt/ros
+          echo "ROS_DISTRO is: ${ROS_DISTRO:-not set}"
 
       - name: Setup ROS 2 Environment
         shell: bash
         run: |
           echo "Sourcing ROS 2 Environment"
-          export ROS_DISTRO=humble 
+          export ROS_DISTRO=humble
+          if [ -z "$ROS_DISTRO" ]; then
+            echo "Error: ROS_DISTRO is not set."
+            exit 1
+          fi
+          echo "ROS_DISTRO is set to: $ROS_DISTRO"
           source /opt/ros/$ROS_DISTRO/setup.bash
           colcon list
 
