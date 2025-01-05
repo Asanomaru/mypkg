@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # SPDX-FileCopyrightText: 2025 Yuuki Udagawa
 # SPDX-License-Identifier: BSD-3-Clause
 
