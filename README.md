@@ -29,7 +29,6 @@ ros2 run mypkg calendar_notifier
 
 ## eventsについて
 events.pyは特定の日付に対応する予定情報を格納するためのファイルです
-events.pyで自分の予定を好きなように入れることができます
 
 ## listenerについて
 listener.pyはcalendar_notifierから通知を受け取れているかを確認するためのテスト用ノードです
