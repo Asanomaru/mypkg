@@ -1,7 +1,8 @@
 # mypackage
 [![test](https://github.com/Asanomaru/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Asanomaru/mypkg/actions/workflows/test.yml)
-このパッケージは2024年ロボットシステム学課題2で作成したROS2のパ>ッケージです
 
+## このパッケージについて
+このパッケージは2024年ロボットシステム学課題2で作成したROS2のパッケージです
 
 ## 概要
 - 日時通知: 現在の日付、曜日、時刻を通知します
