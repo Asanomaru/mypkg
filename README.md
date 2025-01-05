@@ -1,8 +1,8 @@
 # mypackage
-[![test](https://github.com/Asanomaru/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Asanomaru/mypkg/actions/workflows/test.yml)
-
-## このパッケージについて
 このパッケージは2024年ロボットシステム学課題2で作成したROS2のパッケージです
+
+## calendar_notifierノード
+[![test](https://github.com/Asanomaru/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/Asanomaru/mypkg/actions/workflows/test.yml)
 
 ## 概要
 - 日時通知: 現在の日付、曜日、時刻を通知します
@@ -12,13 +12,12 @@
 ## テスト環境
 - Ubuntu 22.04 LTS
 
-## calendar_notifierノード
-- 実行方法
+## 実行方法
 ```
 ros2 run mypkg calendar_notifier
 ```
 
-- 実行結果
+## 実行結果
 ```
 [INFO] [1736051966.148992569] [calendar_notifier]: Published calendar notification.
 ```
