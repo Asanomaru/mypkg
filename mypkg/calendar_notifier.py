@@ -35,7 +35,7 @@ class CalendarNotifier(Node):
         msg = String()
         msg.data = notification_message
         self.pub.publish(msg)
-        self.get_logger().info(notification_message)
+        self.get_logger().info("Published calendar notification.")
 
 def main():
     rclpy.init()

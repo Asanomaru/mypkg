@@ -12,7 +12,6 @@ fi
 
 source install/setup.bash
 
-# ログを一時ファイルに保存
 LOG_FILE=/tmp/mypkg.log
 
 echo "Running calendar_notifier and saving logs to $LOG_FILE"
@@ -21,7 +20,7 @@ timeout 20 bash -c "ros2 run mypkg calendar_notifier > $LOG_FILE 2>&1"
 echo "Checking log file..."
 if [ -s $LOG_FILE ]; then
     echo "Log file is not empty. Checking content..."
-    cat $LOG_FILE | grep -i "today is"
+    cat $LOG_FILE | grep -i "Published calendar notification."
     if [ $? -eq 0 ]; then
         echo "Test passed: Notification message detected."
         exit 0
