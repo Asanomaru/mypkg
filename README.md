@@ -16,19 +16,24 @@
 ### パブリッシュするトピック
 - トピック名: `/calendar_notification`
 - 型: `std_msgs/String`
+- 役割: 現在の日付、時刻、曜日、および予定に関する通知情報を送信します。
 
 ## 実行方法
+以下のように実行してください。
 ```
 ros2 run mypkg calendar_notifier
 ```
 
 ## 実行結果
+以下は、ノード実行時に通知情報がパブリッシュされるログです。
 ```
 [INFO] [1736051966.148992569] [calendar_notifier]: Published calendar notification.
 ```
 
 ## トピックの確認方法
+
 ### 実行方法
+以下のように実行することで/calendar_notificationの内容を確認できます。
 ```
 ros2 topic echo /calendar_notification
 ```
