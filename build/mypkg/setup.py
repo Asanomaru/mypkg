@@ -1,1 +1,0 @@
-/home/yuki/ros2_ws/src/mypkg/setup.py
