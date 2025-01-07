@@ -14,8 +14,8 @@
 - 明日行われる予定をリマインドします。
 
 ### パブリッシュするトピック
-- トピック名: /calendar_notifier
-- 型: String
+- トピック名: `/calendar_notification`
+- 型: `std_msgs/String`
 
 ## 実行方法
 ```
