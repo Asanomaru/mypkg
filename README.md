@@ -28,12 +28,12 @@ ros2 run mypkg calendar_notifier
 ```
 
 ## トピックの確認方法
-- 実行方法
+### 実行方法
 ```
 ros2 topic echo /calendar_notification
 ```
 
-- 実行結果
+### 実行結果
 ```
 data: Today is 2025-01-07 (Tuesday), and the current time is 19:22:41.
 ---
