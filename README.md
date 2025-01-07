@@ -14,8 +14,8 @@
 - 明日行われる予定をリマインドします。
 
 ### パブリッシュするトピック
-- トピック名: `/calendar_notification`
-- 型: `std_msgs/String`
+- トピック名: /calendar_notification
+- 型: std_msgs/String
 - 役割: 現在の日付、時刻、曜日、および予定に関する通知情報を送信します。
 
 ## 実行方法
@@ -33,7 +33,7 @@ ros2 run mypkg calendar_notifier
 ## トピックの確認方法
 
 ### 実行方法
-以下のように実行することで/calendar_notificationの内容を確認することができます。
+以下を実行することで/calendar_notificationの内容を確認することができます。
 ```
 ros2 topic echo /calendar_notification
 ```
